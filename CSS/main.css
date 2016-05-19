@@ -274,7 +274,7 @@ THEME
 html {
   font-family: "Merriweather", serif;
   font-size: 1px;
-  background-color: linear-gradient(green, red, yellow);
+  background: linear-gradient(green, red, yellow);
   background: -webkit-linear-gradient(green, red, yellow);
   background: -o-linear-gradient(green, red, yellow);
   background: -moz-linear-gradient(green, red, yellow);
