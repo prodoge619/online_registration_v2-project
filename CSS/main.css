@@ -1,0 +1,446 @@
+/*----------------------------------------------------------------------------------------------------------------------- *\
+BASE
+\*----------------------------------------------------------------------------------------------------------------------- */
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+legend,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+/* Typographic elements */
+h1 {
+  color: white;
+}
+
+h2,
+legend {
+  color: #212B34;
+}
+
+h2 {
+  margin-bottom: 12px;
+}
+
+p {
+  color: #91979D;
+}
+
+legend {
+  margin-bottom: 24px;
+  display: inline-block;
+  width: 100%;
+}
+
+legend:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #212B34;
+  margin-bottom: 24px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+p.descriptive-label {
+  color: white;
+  margin: 0 0 12px 0;
+}
+
+/* Input types */
+select,
+textarea,
+input {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+    }
+
+select,
+textarea,
+input:not([type='radio']),
+input:not([type='checkbox']) {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+}
+
+input[type='number'],
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='date'],
+select {
+  margin-bottom: 20px;
+  padding: 0 14px;
+  color: #91979D;
+}
+
+input[type='number']:last-child,
+input[type='text']:last-child,
+input[type='tel']:last-child,
+input[type='email']:last-child,
+input[type='date']:last-child,
+select:last-child {
+  margin-bottom: 0;
+}
+
+input[type="date"] {
+  background: url(../Images/icon-calendar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding: 13px 14px !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background-color: transparent;
+  height: 8px;
+  width: 8px;
+  z-index: 0; }
+  input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+select {
+  background: url(../Images/icon-arrow-dwn.svg);
+  background-color: #EBECEE;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+select,
+textarea,
+input:not([type='submit']) {
+  border: 2px solid #EBECEE;
+  background-color: #EBECEE;
+}
+
+input#habitat-zip-code {
+  width: 150px;
+}
+
+/* Radio's and checkboxes */
+input[type='radio'],
+input[type='checkbox'] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+input[type='radio'] + label,
+input[type='checkbox'] + label {
+  position: relative;
+  top: -5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+input[type='radio'] {
+  border-radius: 100%;
+}
+
+/* Comment box */
+textarea {
+  padding: 14px;
+  height: 100px;
+}
+
+/* Submit button */
+input[type='submit'] {
+  background-color: #42AFA5;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------- *\
+MODULES
+\*----------------------------------------------------------------------------------------------------------------------- */
+/* Header */
+header.page-header {
+  background-color: #212B34;
+}
+header.page-header h1 {
+  margin: 0;
+}
+
+/* Intro */
+section.form-intro {
+  padding-bottom: 24px;
+}
+
+/* Form */
+form.form-wrapper {
+  padding-top: 3px;
+  border-top: 4px solid #212B34;
+}
+
+/* Form fieldsets */
+fieldset.form-fieldset {
+  padding-bottom: 32px;
+}
+
+fieldset.form-fieldset div[id$='-group'] {
+  margin-bottom: 16px;
+}
+
+fieldset.form-fieldset div[id$='-group']:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+footer.page-footer {
+  padding-bottom: 200px;
+}
+
+footer.page-footer .footer-logo {
+  width: 50px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------- *\
+STATES
+\*----------------------------------------------------------------------------------------------------------------------- */
+/* Transitions */
+input:not([type='submit']),
+select,
+textarea {
+  -webkit-transition: border-color 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+input[type='submit'] {
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Checked + focus states */
+input[type='radio']:checked,
+input[type='checkbox']:checked,
+input[type='radio']:focus,
+input[type='checkbox']:focus,
+select:focus,
+input[type='number']:focus,
+input[type='text']:focus,
+input[type='tel']:focus,
+input[type='email']:focus,
+input[type='date']:focus,
+textarea:focus {
+  border-color: #375478;
+  outline: 0;
+}
+
+input[type='radio']:checked,
+input[type='checkbox']:checked,
+select:focus,
+input:focus {
+  padding: 0 14px;
+}
+
+input[type='radio']:checked,
+input[type='checkbox']:checked,
+input[type='radio']:focus,
+input[type='checkbox']:focus {
+  padding: 0;
+}
+
+textarea:focus {
+  padding: 14px;
+}
+
+input[type='submit']:focus {
+  outline: 0;
+  background-color: #375478;
+}
+
+/* Validation */
+/*----------------------------------------------------------------------------------------------------------------------- *\
+THEME
+\*----------------------------------------------------------------------------------------------------------------------- */
+html {
+  font-family: "Merriweather", serif;
+  font-size: 1px;
+  background-color: linear-gradient(green, red, yellow);
+  background: -webkit-linear-gradient(green, red, yellow);
+  background: -o-linear-gradient(green, red, yellow);
+  background: -moz-linear-gradient(green, red, yellow);
+}
+
+h1 {
+  font-size: 18em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2,
+legend {
+  font-size: 18em;
+  font-weight: 600;
+  color: white;
+}
+
+p,
+label,
+input,
+select,
+option,
+textarea {
+  font-size: 14em;
+  font-weight: 100;
+}
+p,
+label,
+input,
+select,
+option {
+  color: white;
+}
+
+input,
+select,
+option,
+textarea {
+  font-family: "Merriweather", serif;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 12rem;
+  font-weight: 100;
+  font-style: italic;
+  text-align: right;
+}
+
+input::-moz-placeholder {
+  font-size: 12rem;
+  font-weight: 100;
+  font-style: italic;
+  text-align: right;
+}
+
+input:-ms-input-placeholder {
+  font-size: 12rem;
+  font-weight: 100;
+  font-style: italic;
+  text-align: right;
+}
+
+input[type='submit'] {
+  font-family: "Merriweather", serif;
+  font-size: 18em;
+  font-weight: 500;
+  height: 60px;
+  color: white;
+}
+
+footer {
+  font-style: italic;
+  text-align: center;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------- *\
+LAYOUT
+\*----------------------------------------------------------------------------------------------------------------------- */
+/* Mobile devices and up*/
+main.container {
+  padding: 12px;
+}
+
+header.page-header {
+  padding: 24px 0;
+  text-align: center;
+}
+
+section.form-intro h2,
+section.form-intro p {
+  text-align: center;
+}
+
+/* Medium sized devices and up*/
+@media screen and (min-width: 760px) {
+main.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 40px 0 12px 0;
+}
+
+.form-intro h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+fieldset.form-fieldset legend:before {
+  margin-bottom: 48px;
+}
+
+fieldset.form-fieldset:first-child {
+  padding-bottom: 48px;
+}
+
+fieldset.form-fieldset:first-child label {
+  float: left;
+  width: 25%;
+  margin-top: 16px;
+}
+
+fieldset.form-fieldset:first-child input,
+fieldset.form-fieldset:first-child select {
+  float: left;
+  width: 60%;
+}
+
+fieldset.form-fieldset:first-child:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+  }
+/* Larger devices and up */
+@media screen and (min-width: 1024px) {
+main.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 40px 0 12px 0;
+}
+
+fieldset.form-fieldset .grid-container .row:first-child {
+  padding-right: 24px;
+}
+
+fieldset.form-fieldset .grid-container .row:last-child {
+  padding-left: 24px;
+}
+
+fieldset.form-fieldset #personal-info,
+fieldset.form-fieldset #habitat-info,
+fieldset.form-fieldset #checkbox-group,
+fieldset.form-fieldset #radio-group {
+  float: left;
+  width: 50%;
+}
+
+fieldset.form-fieldset #checkbox-group,
+fieldset.form-fieldset #radio-group {
+  margin-bottom: 0;
+}
+
+fieldset.form-fieldset #newsletter-group:after,
+fieldset.form-fieldset #contact-group:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+  }
